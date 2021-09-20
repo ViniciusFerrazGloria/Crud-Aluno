@@ -31,11 +31,7 @@ namespace Estudio
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Aluno Al = new Aluno(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, textBox7.Text, textBox8.Text, textBox9.Text, textBox10.Text, textBox11.Text, true);
-            if (Al.validaCPF())
-            {
-                Al.cadastrarAluno();
-            }
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -65,6 +61,15 @@ namespace Estudio
             groupBox1.Visible = false;
             textBox12.Clear();
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Aluno Al = new Aluno(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, textBox7.Text, textBox8.Text, textBox9.Text, textBox10.Text, textBox11.Text, true);
+            if (Al.validaCPF())
+            {
+                Al.cadastrarAluno();
+            }
         }
     }
 }
