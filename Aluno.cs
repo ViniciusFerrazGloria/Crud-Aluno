@@ -22,13 +22,13 @@ namespace Estudio
         private string Telefone;
         private string Email;
         private byte[] Foto;
-        private bool Ativo;
+        private String Ativo;
         
         public static MySqlConnection con;
 
 
 
-        public Aluno(string cpf, string nome, string rua, string numero, string bairro, string complemento, string cep, string cidade, string estado, string telefone, string email, /*byte[] foto,*/ bool ativo)
+        public Aluno(string cpf, string nome, string rua, string numero, string bairro, string complemento, string cep, string cidade, string estado, string telefone, string email, /*byte[] foto,*/ String ativo)
         {
             DAO_Conexao.getConexao("143.106.241.3", "cl19258", "cl19258", "cl*13032003");
             setCPF(cpf);
@@ -173,12 +173,12 @@ namespace Estudio
             return this.Foto;
         }
         /////////////////////////////////
-        public void setAtivo(bool ativo)
+        public void setAtivo(String ativo)
         {
             this.Ativo = ativo;
         }
 
-        public bool getAtivo()
+        public String getAtivo()
         {
             return this.Ativo;
         }

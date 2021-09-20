@@ -46,14 +46,14 @@ namespace Estudio
         private void button3_Click(object sender, EventArgs e)
         {
             Aluno aluno = new Aluno();
-            bool status;
+            String status;
             if(radioButton1.Checked == true)
             {
-                status = true;
+                status = "1";
             }
             else
             {
-                status = false;
+                status = "0";
             }
             aluno.setCPF(textBox12.Text);
             aluno.setAtivo(status);
@@ -65,7 +65,7 @@ namespace Estudio
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Aluno Al = new Aluno(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, textBox7.Text, textBox8.Text, textBox9.Text, textBox10.Text, textBox11.Text, true);
+            Aluno Al = new Aluno(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, textBox7.Text, textBox8.Text, textBox9.Text, textBox10.Text, textBox11.Text, "1");
             if (Al.validaCPF())
             {
                 Al.cadastrarAluno();
