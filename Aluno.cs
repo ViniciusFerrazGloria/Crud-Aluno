@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Estudio
 {
@@ -22,9 +23,8 @@ namespace Estudio
         private string Email;
         private byte[] Foto;
         private bool Ativo;
-
-        //MySqlConnection con;
-
+        
+        public static MySqlConnection con;
 
 
 
@@ -173,32 +173,17 @@ namespace Estudio
             return this.Foto;
         }
         /////////////////////////////////
-        private void setAtivo(bool ativo)
+        public void setAtivo(bool ativo)
         {
             this.Ativo = ativo;
         }
 
-        private bool getAtivo()
+        public bool getAtivo()
         {
             return this.Ativo;
         }
-        /////////////////////////////////
-        /*public bool verificaCPF(string cpf)
-        {
-            string verificacpf="";
-            verificacpf = DAO_Conexao.achaCPF(cpf);
-            if ((cpf.ToString()) == verificacpf.ToString())
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-            
-        }*/
 
-        public bool verificaCPF() //string CPF - sem parâmetro
+        public bool validaCPF() //string CPF - sem parâmetro
         {
             int soma, resto, cont = 0;
             soma = 0;
@@ -238,12 +223,25 @@ namespace Estudio
             return true;
         }
 
-        public bool consultaAluno(String cpf)
+        public void alteraStatus()
+        {
+            DAO_Conexao.con.Open();
+            try
+            {
+                MySqlCommand altera = new MySqlCommand("UPDATE Estudio_Aluno SET Ativo='" + getAtivo() + "' WHERE CPFAluno='" + getCPF() + "';", DAO_Conexao.con);
+                altera.ExecuteNonQuery();
+                MessageBox.Show("Status alterado com sucesso");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+        public static bool consultaAluno(String cpf)
         {
             Boolean existe = false;
             try
             {
-                DAO_Conexao.con.Open();
                 MySqlCommand consulta = new MySqlCommand("SELECT * FROM Estudio_Aluno WHERE CPFAluno='" + cpf + "'", DAO_Conexao.con);
                 MySqlDataReader resultado = consulta.ExecuteReader();
                 if (resultado.Read())
@@ -265,28 +263,24 @@ namespace Estudio
 
         }
 
-        public bool cadastrarAluno()
+        public void cadastrarAluno()
         {
-            bool cad = false;
-            //string x = CPF;
+            
             try
             {
-                DAO_Conexao.OpenConexao();
-                MySqlCommand insere = new MySqlCommand("insert into Estudio_Aluno (CPFAluno, NomeAluno, RuaAluno, NumeroAluno, BairroAluno, ComplementoAluno, CEPAluno, CidadeAluno, EstadoAluno, TelefoneAluno, EmailAluno) values=('" + CPF + "','" + Nome + "','" + Rua + "','" + Numero + "','" + Bairro + "','" + Complemento + "','" + CEP + "','" + Cidade + "','" + Estado + "','" + Telefone + "','" + Email + "')", DAO_Conexao.con);
+                MySqlCommand insere = new MySqlCommand("INSERT INTO Estudio_Aluno (CPFAluno, NomeAluno, RuaAluno, NumeroAluno, BairroAluno, ComplementoAluno, CEPAluno, CidadeAluno, EstadoAluno, TelefoneAluno, EmailAluno) VALUES ('" + CPF + "','" + Nome + "','" + Rua + "','" + Numero + "','" + Bairro + "','" + Complemento + "','" + CEP + "','" + Cidade + "','" + Estado + "','" + Telefone + "','" + Email + "')", DAO_Conexao.con);
                 //insere.Parameters.AddWithValue("foto", this.Foto);
                 insere.ExecuteNonQuery();
-                cad = true;
+                MessageBox.Show("Cadastrado");
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.ToString());
+                MessageBox.Show(ex.ToString());
             }
             finally
             {
-                DAO_Conexao.CloseConexao();
+                DAO_Conexao.con.Close();
             }
-
-            return cad;
         }
 
 

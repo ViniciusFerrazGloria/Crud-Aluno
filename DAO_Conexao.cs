@@ -26,10 +26,7 @@ namespace Estudio
             {
                 Console.WriteLine(e.Message);
             }
-            finally
-            {
-                con.Close();
-            }
+          
             return retorno;
         }
 
@@ -73,35 +70,6 @@ namespace Estudio
             return volta;
         }
 
-        public static Boolean OpenConexao()
-        {
-            Boolean _return = true;
-            try
-            {
-                con.Open();
-            }
-            catch (Exception erro)
-            { 
-                _return = false;
-            }
-
-            return _return;
-        }
-
-        public static Boolean CloseConexao()
-        {
-            Boolean _return = true;
-            try
-            {
-                con.Close();
-            }
-            catch (Exception erro)
-            {
-                _return = false;
-            }
-
-            return _return;
-        }
     }
 
    

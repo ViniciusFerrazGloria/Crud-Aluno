@@ -31,13 +31,14 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.arquivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.posloginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consusltarDadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -46,7 +47,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.arquivoToolStripMenuItem,
-            this.cadastroToolStripMenuItem});
+            this.cadastroToolStripMenuItem,
+            this.consusltarDadosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -64,8 +66,21 @@
             // posloginToolStripMenuItem
             // 
             this.posloginToolStripMenuItem.Name = "posloginToolStripMenuItem";
-            this.posloginToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.posloginToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.posloginToolStripMenuItem.Text = "poslogin";
+            // 
+            // cadastroToolStripMenuItem
+            // 
+            this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
+            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.cadastroToolStripMenuItem.Text = "Cadastro";
+            this.cadastroToolStripMenuItem.Click += new System.EventHandler(this.cadastroToolStripMenuItem_Click);
+            // 
+            // consusltarDadosToolStripMenuItem
+            // 
+            this.consusltarDadosToolStripMenuItem.Name = "consusltarDadosToolStripMenuItem";
+            this.consusltarDadosToolStripMenuItem.Size = new System.Drawing.Size(101, 20);
+            this.consusltarDadosToolStripMenuItem.Text = "Atualizar Dados";
             // 
             // groupBox1
             // 
@@ -124,13 +139,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Usuario";
             // 
-            // cadastroToolStripMenuItem
-            // 
-            this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
-            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
-            this.cadastroToolStripMenuItem.Text = "Cadastro";
-            this.cadastroToolStripMenuItem.Click += new System.EventHandler(this.cadastroToolStripMenuItem_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -164,6 +172,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripMenuItem posloginToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadastroToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consusltarDadosToolStripMenuItem;
     }
 }
 

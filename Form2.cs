@@ -31,12 +31,40 @@ namespace Estudio
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Boolean feito=false;
-            //string teste = "";
-
             Aluno Al = new Aluno(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, textBox7.Text, textBox8.Text, textBox9.Text, textBox10.Text, textBox11.Text, true);
-            feito = Al.cadastrarAluno();
-            MessageBox.Show(feito.ToString());
+            if (Al.validaCPF())
+            {
+                Al.cadastrarAluno();
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            String cpf = textBox12.Text;
+            if (Aluno.consultaAluno(cpf))
+            {
+                groupBox1.Visible = true;
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Aluno aluno = new Aluno();
+            bool status;
+            if(radioButton1.Checked == true)
+            {
+                status = true;
+            }
+            else
+            {
+                status = false;
+            }
+            aluno.setCPF(textBox12.Text);
+            aluno.setAtivo(status);
+            aluno.alteraStatus();
+            groupBox1.Visible = false;
+            textBox12.Clear();
+
         }
     }
 }
