@@ -172,7 +172,6 @@ namespace Estudio
         {
             return this.Foto;
         }
-        /////////////////////////////////
         public void setAtivo(String ativo)
         {
             this.Ativo = ativo;
@@ -181,6 +180,22 @@ namespace Estudio
         public String getAtivo()
         {
             return this.Ativo;
+        }
+
+
+        public void insereDadosUpdate(String cpf, String Rua, String Numero, String Bairro, String Complemento, String cep, String Cidade, String Estado, String Telefone, string Email)
+        {
+            this.CPF = cpf;
+            this.Rua = Rua;
+            this.Numero = Numero;
+            this.Bairro = Bairro;
+            this.Complemento = Complemento;
+            this.CEP = cep;
+            this.Cidade = Cidade;
+            this.Estado = Estado;
+            this.Telefone = Telefone;
+            this.Email = Email;
+
         }
 
         public bool validaCPF() //string CPF - sem parâmetro
@@ -228,7 +243,7 @@ namespace Estudio
             DAO_Conexao.con.Open();
             try
             {
-                MySqlCommand altera = new MySqlCommand("UPDATE Estudio_Aluno SET Ativo='" + getAtivo() + "' WHERE CPFAluno='" + getCPF() + "';", DAO_Conexao.con);
+                MySqlCommand altera = new MySqlCommand("UPDATE Estudio_Aluno SET Ativo ='" + getAtivo() + "' WHERE CPFAluno ='" + getCPF() + "';", DAO_Conexao.con);
                 altera.ExecuteNonQuery();
                 MessageBox.Show("Status alterado com sucesso");
             }
@@ -237,9 +252,28 @@ namespace Estudio
                 MessageBox.Show(ex.ToString());
             }
         }
+        public void alteraDados()
+        {
+            DAO_Conexao.con.Open();
+            try
+            {
+                MySqlCommand update = new MySqlCommand("UPDATE Estudio_Aluno SET RuaAluno='" + getRua() + "', NumeroAluno='" + getNumero() + "', BairroAluno='" + getBairro() + "', ComplementoAluno='" + getComplemento() + "', CEPAluno='" + getCEP() + "', CidadeAluno='" + getCidade() + "', EstadoAluno='" + getEstado() + "', TelefoneAluno='" + getTelefone() + "', EmailAluno='" + getEmail() + "' WHERE CPFAluno='" + getCPF() + ";'", DAO_Conexao.con);
+                update.ExecuteNonQuery();
+                MessageBox.Show("Dados alterados com sucesso");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                DAO_Conexao.con.Close();
+            }
+        }
         public static bool consultaAluno(String cpf)
         {
             Boolean existe = false;
+            DAO_Conexao.con.Open();
             try
             {
                 MySqlCommand consulta = new MySqlCommand("SELECT * FROM Estudio_Aluno WHERE CPFAluno='" + cpf + "'", DAO_Conexao.con);
@@ -282,6 +316,8 @@ namespace Estudio
                 DAO_Conexao.con.Close();
             }
         }
+
+     
 
 
     }

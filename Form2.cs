@@ -71,5 +71,26 @@ namespace Estudio
                 Al.cadastrarAluno();
             }
         }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            String cpf = textBox13.Text;
+            if (Aluno.consultaAluno(cpf))
+            {
+                groupBox2.Visible = true;
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Aluno aluno2 = new Aluno();
+            aluno2.insereDadosUpdate(textBox13.Text, textBox14.Text, textBox15.Text, textBox16.Text, textBox17.Text, textBox18.Text, textBox19.Text, textBox20.Text, textBox21.Text, textBox22.Text);
+            aluno2.alteraDados();
+        }
     }
 }
