@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using MySql.Data.MySqlClient;
 
 namespace Estudio
 {
@@ -19,7 +20,7 @@ namespace Estudio
         {
             InitializeComponent();
             if (DAO_Conexao.getConexao("143.106.241.3", "cl19258", "cl19258", "cl*13032003"))
-                MessageBox.Show("Conectado");
+                Console.WriteLine("Conectado");
             else
                 MessageBox.Show("Erro de conexão");
         }
@@ -45,7 +46,7 @@ namespace Estudio
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Aluno aluno = new Aluno();
+            /*Aluno aluno = new Aluno();
             String status;
             if(radioButton1.Checked == true)
             {
@@ -59,17 +60,54 @@ namespace Estudio
             aluno.setAtivo(status);
             aluno.alteraStatus();
             groupBox1.Visible = false;
-            textBox12.Clear();
+            textBox12.Clear();*/
 
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Aluno Al = new Aluno(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, textBox7.Text, textBox8.Text, textBox9.Text, textBox10.Text, textBox11.Text, "1");
+            Aluno Al = new Aluno(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, textBox7.Text, textBox8.Text, textBox9.Text, textBox10.Text, textBox11.Text, true);
             if (Al.validaCPF())
             {
                 Al.cadastrarAluno();
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            label37.Text = textBox13.Text;
+            try
+            {
+                //DAO_Conexao.con.Open();
+                MySqlCommand consulta = new MySqlCommand("SELECT * FROM Estudio_Aluno WHERE CPFAluno ='" + textBox13.Text + "'", DAO_Conexao.con);
+                MySqlDataReader resultado = consulta.ExecuteReader();
+                if (resultado.Read())
+                {
+                    
+                    label31.Text = resultado["CEPAluno"].ToString();
+                    label36.Text = resultado["NomeAluno"].ToString();
+                    label34.Text = resultado["NumeroAluno"].ToString();
+                    label33.Text = resultado["BairroAluno"].ToString();
+                    label32.Text = resultado["ComplementoAluno"].ToString();
+                    label35.Text = resultado["RuaAluno"].ToString();
+                    label30.Text = resultado["CidadeAluno"].ToString();
+                    label29.Text = resultado["EstadoAluno"].ToString();
+                    label28.Text = resultado["TelefoneAluno"].ToString();
+                    label27.Text = resultado["EmailAluno"].ToString();
+
+                }
+                MessageBox.Show("chegou até aqui");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                DAO_Conexao.con.Close();
+            }
+        }
+
     }
 }

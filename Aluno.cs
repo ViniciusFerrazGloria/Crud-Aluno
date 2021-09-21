@@ -22,13 +22,13 @@ namespace Estudio
         private string Telefone;
         private string Email;
         private byte[] Foto;
-        private String Ativo;
+        private bool Ativo;
         
         public static MySqlConnection con;
 
 
 
-        public Aluno(string cpf, string nome, string rua, string numero, string bairro, string complemento, string cep, string cidade, string estado, string telefone, string email, /*byte[] foto,*/ String ativo)
+        public Aluno(string cpf, string nome, string rua, string numero, string bairro, string complemento, string cep, string cidade, string estado, string telefone, string email, /*byte[] foto,*/ bool ativo)
         {
             DAO_Conexao.getConexao("143.106.241.3", "cl19258", "cl19258", "cl*13032003");
             setCPF(cpf);
@@ -173,12 +173,12 @@ namespace Estudio
             return this.Foto;
         }
         /////////////////////////////////
-        public void setAtivo(String ativo)
+        public void setAtivo(bool ativo)
         {
             this.Ativo = ativo;
         }
 
-        public String getAtivo()
+        public bool getAtivo()
         {
             return this.Ativo;
         }
@@ -282,6 +282,54 @@ namespace Estudio
                 DAO_Conexao.con.Close();
             }
         }
+
+
+        /*public void BuscarInformação(string CPF)
+        {
+            Aluno Al2 = new Aluno();
+            try
+            {
+                MySqlCommand consulta = new MySqlCommand("select * from Estudio_Aluno where CPFAluno = '"+ CPF+"')", DAO_Conexao.con);
+                MySqlDataReader resultado = consulta.ExecuteReader();
+                if (resultado.Read())
+                {
+                    Al2.setCPF(CPF);
+                    Al2.setCEP(resultado["CEPAluno"].ToString());
+                    Al2.setNome(resultado["NomeAluno"].ToString());
+                    Al2.setNumero(resultado["NumeroAluno"].ToString());
+                    Al2.setBairro(resultado["BairroAluno"].ToString());
+                    Al2.setComplemento(resultado["ComplementoAluno"].ToString());
+                    Al2.setRua(resultado["RuaAluno"].ToString());
+                    Al2.setCidade(resultado["CidadeAluno"].ToString());
+                    Al2.setEstado(resultado["EstadoAluno"].ToString());
+                    Al2.setTelefone(resultado["TelefoneAluno"].ToString());
+                    Al2.setEmail(resultado["EmailAluno"].ToString());
+
+                }
+                MessageBox.Show("chegou até aqui");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                DAO_Conexao.con.Close();
+            }
+        }*/
+        /*        private string CPF;
+        private string Nome;
+        private string Rua;
+        private string Numero;
+        private string Bairro;
+        private string Complemento;
+        private string CEP;
+        private string Cidade;
+        private string Estado;
+        private string Telefone;
+        private string Email;
+        private byte[] Foto;
+        private bool Ativo;*/
 
 
     }
