@@ -46,7 +46,7 @@ namespace Estudio
 
         private void button3_Click(object sender, EventArgs e)
         {
-            /*Aluno aluno = new Aluno();
+            Aluno aluno = new Aluno();
             String status;
             if(radioButton1.Checked == true)
             {
@@ -60,13 +60,13 @@ namespace Estudio
             aluno.setAtivo(status);
             aluno.alteraStatus();
             groupBox1.Visible = false;
-            textBox12.Clear();*/
+            textBox12.Clear();
 
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Aluno Al = new Aluno(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, textBox7.Text, textBox8.Text, textBox9.Text, textBox10.Text, textBox11.Text, true);
+            Aluno Al = new Aluno(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, textBox7.Text, textBox8.Text, textBox9.Text, textBox10.Text, textBox11.Text, "1");
             if (Al.validaCPF())
             {
                 Al.cadastrarAluno();
@@ -109,5 +109,20 @@ namespace Estudio
             }
         }
 
+        private void button5_Click(object sender, EventArgs e)
+        {
+            string cpf = textBox14.Text;
+            if (Aluno.consultaAluno(cpf))
+            {
+                groupBox2.Visible = true;
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Aluno aluno2 = new Aluno();
+            aluno2.insereDadosUpdate(textBox14.Text, textBox15.Text, textBox16.Text, textBox17.Text, textBox18.Text, textBox19.Text, textBox20.Text, textBox21.Text, textBox22.Text, textBox23.Text);
+            aluno2.alteraDados();
+        }
     }
 }

@@ -22,13 +22,13 @@ namespace Estudio
         private string Telefone;
         private string Email;
         private byte[] Foto;
-        private bool Ativo;
+        private string Ativo;
         
         public static MySqlConnection con;
 
 
 
-        public Aluno(string cpf, string nome, string rua, string numero, string bairro, string complemento, string cep, string cidade, string estado, string telefone, string email, /*byte[] foto,*/ bool ativo)
+        public Aluno(string cpf, string nome, string rua, string numero, string bairro, string complemento, string cep, string cidade, string estado, string telefone, string email, /*byte[] foto,*/ string ativo)
         {
             DAO_Conexao.getConexao("143.106.241.3", "cl19258", "cl19258", "cl*13032003");
             setCPF(cpf);
@@ -173,12 +173,12 @@ namespace Estudio
             return this.Foto;
         }
         /////////////////////////////////
-        public void setAtivo(bool ativo)
+        public void setAtivo(string ativo)
         {
             this.Ativo = ativo;
         }
 
-        public bool getAtivo()
+        public string getAtivo()
         {
             return this.Ativo;
         }
@@ -237,9 +237,10 @@ namespace Estudio
                 MessageBox.Show(ex.ToString());
             }
         }
-        public static bool consultaAluno(String cpf)
+        public static bool consultaAluno(string cpf)
         {
             Boolean existe = false;
+
             try
             {
                 MySqlCommand consulta = new MySqlCommand("SELECT * FROM Estudio_Aluno WHERE CPFAluno='" + cpf + "'", DAO_Conexao.con);
@@ -258,8 +259,6 @@ namespace Estudio
                 DAO_Conexao.con.Close();
             }
             return existe;
-
-
 
         }
 
@@ -284,29 +283,14 @@ namespace Estudio
         }
 
 
-        /*public void BuscarInformação(string CPF)
+        public void alteraDados()
         {
-            Aluno Al2 = new Aluno();
+            DAO_Conexao.con.Open();
             try
             {
-                MySqlCommand consulta = new MySqlCommand("select * from Estudio_Aluno where CPFAluno = '"+ CPF+"')", DAO_Conexao.con);
-                MySqlDataReader resultado = consulta.ExecuteReader();
-                if (resultado.Read())
-                {
-                    Al2.setCPF(CPF);
-                    Al2.setCEP(resultado["CEPAluno"].ToString());
-                    Al2.setNome(resultado["NomeAluno"].ToString());
-                    Al2.setNumero(resultado["NumeroAluno"].ToString());
-                    Al2.setBairro(resultado["BairroAluno"].ToString());
-                    Al2.setComplemento(resultado["ComplementoAluno"].ToString());
-                    Al2.setRua(resultado["RuaAluno"].ToString());
-                    Al2.setCidade(resultado["CidadeAluno"].ToString());
-                    Al2.setEstado(resultado["EstadoAluno"].ToString());
-                    Al2.setTelefone(resultado["TelefoneAluno"].ToString());
-                    Al2.setEmail(resultado["EmailAluno"].ToString());
-
-                }
-                MessageBox.Show("chegou até aqui");
+                MySqlCommand update = new MySqlCommand("UPDATE Estudio_Aluno SET RuaAluno='" + getRua() + "', NumeroAluno='" + getNumero() + "', BairroAluno='" + getBairro() + "', ComplementoAluno='" + getComplemento() + "', CEPAluno='" + getCEP() + "', CidadeAluno='" + getCidade() + "', EstadoAluno='" + getEstado() + "', TelefoneAluno='" + getTelefone() + "', EmailAluno='" + getEmail() + "' WHERE CPFAluno='" + getCPF() + "'", DAO_Conexao.con);
+                update.ExecuteNonQuery();
+                MessageBox.Show("Dados alterados com sucesso");
             }
             catch (Exception ex)
             {
@@ -316,20 +300,22 @@ namespace Estudio
             {
                 DAO_Conexao.con.Close();
             }
-        }*/
-        /*        private string CPF;
-        private string Nome;
-        private string Rua;
-        private string Numero;
-        private string Bairro;
-        private string Complemento;
-        private string CEP;
-        private string Cidade;
-        private string Estado;
-        private string Telefone;
-        private string Email;
-        private byte[] Foto;
-        private bool Ativo;*/
+        }
+
+        public void insereDadosUpdate(string cpf, string Rua, string Numero, string Bairro, string Complemento, string cep, string Cidade, string Estado, string Telefone, string Email)
+        {
+            this.CPF = cpf;
+            this.Rua = Rua;
+            this.Numero = Numero;
+            this.Bairro = Bairro;
+            this.Complemento = Complemento;
+            this.CEP = cep;
+            this.Cidade = Cidade;
+            this.Estado = Estado;
+            this.Telefone = Telefone;
+            this.Email = Email;
+
+        }
 
 
     }
