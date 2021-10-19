@@ -29,10 +29,9 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.arquivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.posloginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consusltarDadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cadastroTurmaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -46,41 +45,35 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.arquivoToolStripMenuItem,
             this.cadastroToolStripMenuItem,
-            this.consusltarDadosToolStripMenuItem});
+            this.consusltarDadosToolStripMenuItem,
+            this.cadastroTurmaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // arquivoToolStripMenuItem
-            // 
-            this.arquivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.posloginToolStripMenuItem});
-            this.arquivoToolStripMenuItem.Name = "arquivoToolStripMenuItem";
-            this.arquivoToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.arquivoToolStripMenuItem.Text = "Arquivo";
-            // 
-            // posloginToolStripMenuItem
-            // 
-            this.posloginToolStripMenuItem.Name = "posloginToolStripMenuItem";
-            this.posloginToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
-            this.posloginToolStripMenuItem.Text = "poslogin";
-            // 
             // cadastroToolStripMenuItem
             // 
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
-            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
-            this.cadastroToolStripMenuItem.Text = "Cadastro";
+            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
+            this.cadastroToolStripMenuItem.Text = "Aluno";
             this.cadastroToolStripMenuItem.Click += new System.EventHandler(this.cadastroToolStripMenuItem_Click);
             // 
             // consusltarDadosToolStripMenuItem
             // 
             this.consusltarDadosToolStripMenuItem.Name = "consusltarDadosToolStripMenuItem";
-            this.consusltarDadosToolStripMenuItem.Size = new System.Drawing.Size(101, 20);
-            this.consusltarDadosToolStripMenuItem.Text = "Atualizar Dados";
+            this.consusltarDadosToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
+            this.consusltarDadosToolStripMenuItem.Text = "Modalidade";
+            this.consusltarDadosToolStripMenuItem.Click += new System.EventHandler(this.consusltarDadosToolStripMenuItem_Click);
+            // 
+            // cadastroTurmaToolStripMenuItem
+            // 
+            this.cadastroTurmaToolStripMenuItem.Name = "cadastroTurmaToolStripMenuItem";
+            this.cadastroTurmaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.cadastroTurmaToolStripMenuItem.Text = "Turma";
+            this.cadastroTurmaToolStripMenuItem.Click += new System.EventHandler(this.cadastroTurmaToolStripMenuItem_Click);
             // 
             // groupBox1
             // 
@@ -163,16 +156,15 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem arquivoToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ToolStripMenuItem posloginToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadastroToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consusltarDadosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cadastroTurmaToolStripMenuItem;
     }
 }
 

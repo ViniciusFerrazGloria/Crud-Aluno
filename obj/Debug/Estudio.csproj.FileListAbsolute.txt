@@ -75,3 +75,5 @@ C:\Users\fabri\OneDrive\Área de Trabalho\ESCOLA\DAD\Estudio\Crud-Aluno\obj\Debu
 C:\Users\fabri\OneDrive\Área de Trabalho\ESCOLA\DAD\Estudio\Crud-Aluno\obj\Debug\Estudio.csproj.CopyComplete
 C:\Users\fabri\OneDrive\Área de Trabalho\ESCOLA\DAD\Estudio\Crud-Aluno\obj\Debug\Estudio.exe
 C:\Users\fabri\OneDrive\Área de Trabalho\ESCOLA\DAD\Estudio\Crud-Aluno\obj\Debug\Estudio.pdb
+C:\Users\fabri\OneDrive\Área de Trabalho\ESCOLA\DAD\Estudio\Crud-Aluno\obj\Debug\Estudio.Form3.resources
+C:\Users\fabri\OneDrive\Área de Trabalho\ESCOLA\DAD\Estudio\Crud-Aluno\obj\Debug\Estudio.Form4.resources

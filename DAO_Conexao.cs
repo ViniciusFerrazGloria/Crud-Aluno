@@ -18,8 +18,7 @@ namespace Estudio
             try
             {
                 con = new MySqlConnection("server=" + local + ";User ID=" + user + ";database=" + banco + ";password = "+senha);
-    
-                con.Open();
+                //con.Open();
                 retorno = true;
             }
             catch (Exception e)
@@ -67,6 +66,7 @@ namespace Estudio
             {
                 volta = Convert.ToString(resultado["cpf"].ToString());
             }
+            con.Close();
             return volta;
         }
 

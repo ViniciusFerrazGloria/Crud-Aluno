@@ -78,7 +78,7 @@ namespace Estudio
             label37.Text = textBox13.Text;
             try
             {
-                //DAO_Conexao.con.Open();
+                DAO_Conexao.con.Open();
                 MySqlCommand consulta = new MySqlCommand("SELECT * FROM Estudio_Aluno WHERE CPFAluno ='" + textBox13.Text + "'", DAO_Conexao.con);
                 MySqlDataReader resultado = consulta.ExecuteReader();
                 if (resultado.Read())

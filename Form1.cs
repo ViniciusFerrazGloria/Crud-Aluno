@@ -64,6 +64,31 @@ namespace Estudio
             t1.Start();
         }
 
+        private void abrirForm3(object obj)
+        {
+            Application.Run(new Form3());
+        }
+
+        private void consusltarDadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            t1 = new Thread(abrirForm3);
+            t1.SetApartmentState(ApartmentState.STA);
+            t1.Start();
+        }
+
+        private void abrirForm4(object obj)
+        {
+            Application.Run(new Form4());
+        }
+
+        private void cadastroTurmaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            t1 = new Thread(abrirForm4);
+            t1.SetApartmentState(ApartmentState.STA);
+            t1.Start();
+        }
     }
 }
 
