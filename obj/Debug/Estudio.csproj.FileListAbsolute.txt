@@ -77,3 +77,5 @@ C:\Users\fabri\OneDrive\Área de Trabalho\ESCOLA\DAD\Estudio\Crud-Aluno\obj\Debu
 C:\Users\fabri\OneDrive\Área de Trabalho\ESCOLA\DAD\Estudio\Crud-Aluno\obj\Debug\Estudio.pdb
 C:\Users\fabri\OneDrive\Área de Trabalho\ESCOLA\DAD\Estudio\Crud-Aluno\obj\Debug\Estudio.Form3.resources
 C:\Users\fabri\OneDrive\Área de Trabalho\ESCOLA\DAD\Estudio\Crud-Aluno\obj\Debug\Estudio.Form4.resources
+C:\Users\guilh\OneDrive\Documentos\EDUCAÇÃO\COTIL\3INFN\TECNICO\DAD\Crud aluno\Crud-Aluno\obj\Debug\Estudio.Form3.resources
+C:\Users\guilh\OneDrive\Documentos\EDUCAÇÃO\COTIL\3INFN\TECNICO\DAD\Crud aluno\Crud-Aluno\obj\Debug\Estudio.Form4.resources

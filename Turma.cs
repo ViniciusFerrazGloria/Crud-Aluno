@@ -1,8 +1,10 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Estudio
 {
@@ -121,6 +123,57 @@ namespace Estudio
 
         /////////////////////////////////
         
+        public bool cadastraTurma()
+        {
+            bool inseriu = false;
+            try
+            {
+                DAO_Conexao.con.Open();
+                MySqlCommand insere = new MySqlCommand("INSERT INTO Estudio_Turma (IDTurma, IDModalidade, NomeProfessor, DiasSemana, Horarios, NumeroDeAlunos, XNaSemana) VALUES ('"+ idTurma + "','" + idModalidade + "','" + nomeProfessor + "','" + horarios + "','" + diaSemana + "','" + XnaSemana + "','" + NdeAlunos + "')", DAO_Conexao.con);
+                insere.ExecuteNonQuery();
+                inseriu = true;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                DAO_Conexao.con.Close();
+            }
+            return inseriu;
+        }
 
+        public bool Validaid()
+        {
+            string id = "";
+            bool volta = false;
+            try
+            {
+                DAO_Conexao.con.Open();
+                MySqlCommand pesquisa = new MySqlCommand("SELECT * FROM Estudio_Modalidade WHERE IDModalidade='" + idModalidade + "'", DAO_Conexao.con);
+                //insere.Parameters.AddWithValue("foto", this.Foto);
+                MySqlDataReader resultado = pesquisa.ExecuteReader();
+                if (resultado.Read())
+                {
+                    id = resultado["IDModalidade"].ToString();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                DAO_Conexao.con.Close();
+            }
+            if (id == idModalidade)
+            {
+                volta = true;
+            }
+            return volta;
+        }
     }
+
 }
