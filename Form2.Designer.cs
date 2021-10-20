@@ -173,7 +173,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(1160, 530);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Cadastro";
+            this.tabPage1.Text = "Cadastro Aluno";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // button1
@@ -390,7 +390,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1160, 530);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Ativar/Inativar";
+            this.tabPage2.Text = "Ativar/Desativar Aluno";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // groupBox1
@@ -401,7 +401,7 @@
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Location = new System.Drawing.Point(429, 168);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(309, 157);
+            this.groupBox1.Size = new System.Drawing.Size(181, 157);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ativar/Desativar";
@@ -409,9 +409,9 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(6, 112);
+            this.button3.Location = new System.Drawing.Point(6, 128);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(169, 23);
             this.button3.TabIndex = 4;
             this.button3.Text = "Alterar";
             this.button3.UseVisualStyleBackColor = true;
@@ -506,7 +506,7 @@
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(1160, 530);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Busca";
+            this.tabPage3.Text = "Busca Aluno";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // label27
@@ -733,7 +733,7 @@
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage4.Size = new System.Drawing.Size(1160, 530);
             this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Aterar";
+            this.tabPage4.Text = "Alterar Aluno";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // groupBox2
@@ -762,7 +762,6 @@
             this.groupBox2.Size = new System.Drawing.Size(366, 274);
             this.groupBox2.TabIndex = 21;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
             this.groupBox2.Visible = false;
             // 
             // button6
