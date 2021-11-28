@@ -45,6 +45,9 @@ namespace Estudio
                 MessageBox.Show("Usuário ADM");
                 groupBox1.Visible = false;
                 menuStrip1.Visible = true;
+                label3.Visible = false;
+                label4.Visible = false;
+
                 
             }
 
@@ -85,6 +88,10 @@ namespace Estudio
         {
             Application.Run(new Form5());
         }
+        private void abrirForm6(object obj)
+        {
+            Application.Run(new Form6());
+        }
 
         private void cadastroTurmaToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -106,6 +113,14 @@ namespace Estudio
             t1.SetApartmentState(ApartmentState.STA);
             t1.Start();
 
+        }
+
+        private void mensalidadeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            t1 = new Thread(abrirForm6);
+            t1.SetApartmentState(ApartmentState.STA);
+            t1.Start();
         }
     }
 }

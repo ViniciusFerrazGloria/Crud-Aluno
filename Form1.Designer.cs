@@ -39,6 +39,9 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.mensalidadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -49,7 +52,8 @@
             this.cadastroToolStripMenuItem,
             this.consusltarDadosToolStripMenuItem,
             this.cadastroTurmaToolStripMenuItem,
-            this.matriculaToolStripMenuItem});
+            this.matriculaToolStripMenuItem,
+            this.mensalidadeToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -142,11 +146,38 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Usuario";
             // 
+            // mensalidadeToolStripMenuItem
+            // 
+            this.mensalidadeToolStripMenuItem.Name = "mensalidadeToolStripMenuItem";
+            this.mensalidadeToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
+            this.mensalidadeToolStripMenuItem.Text = "Mensalidade";
+            this.mensalidadeToolStripMenuItem.Click += new System.EventHandler(this.mensalidadeToolStripMenuItem_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(609, 166);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(85, 13);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Usuario: Vinicius";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(609, 187);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(68, 13);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Senha: 1234";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
@@ -176,6 +207,9 @@
         private System.Windows.Forms.ToolStripMenuItem consusltarDadosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadastroTurmaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem matriculaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mensalidadeToolStripMenuItem;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
 
