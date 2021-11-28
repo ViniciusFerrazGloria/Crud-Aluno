@@ -32,6 +32,7 @@
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consusltarDadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroTurmaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.matriculaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -47,7 +48,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastroToolStripMenuItem,
             this.consusltarDadosToolStripMenuItem,
-            this.cadastroTurmaToolStripMenuItem});
+            this.cadastroTurmaToolStripMenuItem,
+            this.matriculaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -75,6 +77,13 @@
             this.cadastroTurmaToolStripMenuItem.Text = "Turma";
             this.cadastroTurmaToolStripMenuItem.Click += new System.EventHandler(this.cadastroTurmaToolStripMenuItem_Click);
             // 
+            // matriculaToolStripMenuItem
+            // 
+            this.matriculaToolStripMenuItem.Name = "matriculaToolStripMenuItem";
+            this.matriculaToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
+            this.matriculaToolStripMenuItem.Text = "Matricula";
+            this.matriculaToolStripMenuItem.Click += new System.EventHandler(this.matriculaToolStripMenuItem_Click);
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.button1);
@@ -87,7 +96,8 @@
             this.groupBox1.Size = new System.Drawing.Size(281, 179);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Validação";
+            this.groupBox1.Text = "Login";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // button1
             // 
@@ -165,6 +175,7 @@
         private System.Windows.Forms.ToolStripMenuItem cadastroToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consusltarDadosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadastroTurmaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem matriculaToolStripMenuItem;
     }
 }
 

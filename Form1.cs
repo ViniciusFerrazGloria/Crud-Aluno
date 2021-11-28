@@ -14,10 +14,12 @@ namespace Estudio
     public partial class Form1 : Form
     {
         Thread t1;
+
         public Form1()
         {
             InitializeComponent();
 
+            menuStrip1.Visible = false;
             if (DAO_Conexao.getConexao("143.106.241.3", "cl19258", "cl19258", "cl*13032003"))
                 Console.WriteLine("Conectado");
             else
@@ -42,11 +44,8 @@ namespace Estudio
             {
                 MessageBox.Show("Usuário ADM");
                 groupBox1.Visible = false;
-                menuStrip1.Enabled = true;
-                this.Close();
-                t1 = new Thread(abrirForm2);
-                t1.SetApartmentState(ApartmentState.STA);
-                t1.Start();
+                menuStrip1.Visible = true;
+                
             }
 
         }
@@ -82,12 +81,31 @@ namespace Estudio
             Application.Run(new Form4());
         }
 
+        private void abrirForm5(object obj)
+        {
+            Application.Run(new Form5());
+        }
+
         private void cadastroTurmaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
             t1 = new Thread(abrirForm4);
             t1.SetApartmentState(ApartmentState.STA);
             t1.Start();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void matriculaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            t1 = new Thread(abrirForm5);
+            t1.SetApartmentState(ApartmentState.STA);
+            t1.Start();
+
         }
     }
 }

@@ -79,3 +79,31 @@ C:\Users\fabri\OneDrive\Área de Trabalho\ESCOLA\DAD\Estudio\Crud-Aluno\obj\Debu
 C:\Users\fabri\OneDrive\Área de Trabalho\ESCOLA\DAD\Estudio\Crud-Aluno\obj\Debug\Estudio.Form4.resources
 C:\Users\guilh\OneDrive\Documentos\EDUCAÇÃO\COTIL\3INFN\TECNICO\DAD\Crud aluno\Crud-Aluno\obj\Debug\Estudio.Form3.resources
 C:\Users\guilh\OneDrive\Documentos\EDUCAÇÃO\COTIL\3INFN\TECNICO\DAD\Crud aluno\Crud-Aluno\obj\Debug\Estudio.Form4.resources
+C:\Users\guilh\OneDrive\Área de Trabalho\c#\Crud-Aluno\bin\Debug\Estudio.exe.config
+C:\Users\guilh\OneDrive\Área de Trabalho\c#\Crud-Aluno\bin\Debug\Estudio.exe
+C:\Users\guilh\OneDrive\Área de Trabalho\c#\Crud-Aluno\bin\Debug\Estudio.pdb
+C:\Users\guilh\OneDrive\Área de Trabalho\c#\Crud-Aluno\bin\Debug\MySql.Data.dll
+C:\Users\guilh\OneDrive\Área de Trabalho\c#\Crud-Aluno\bin\Debug\Google.Protobuf.dll
+C:\Users\guilh\OneDrive\Área de Trabalho\c#\Crud-Aluno\bin\Debug\Zstandard.Net.dll
+C:\Users\guilh\OneDrive\Área de Trabalho\c#\Crud-Aluno\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\guilh\OneDrive\Área de Trabalho\c#\Crud-Aluno\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\guilh\OneDrive\Área de Trabalho\c#\Crud-Aluno\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\guilh\OneDrive\Área de Trabalho\c#\Crud-Aluno\bin\Debug\System.Memory.dll
+C:\Users\guilh\OneDrive\Área de Trabalho\c#\Crud-Aluno\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\guilh\OneDrive\Área de Trabalho\c#\Crud-Aluno\bin\Debug\System.Buffers.dll
+C:\Users\guilh\OneDrive\Área de Trabalho\c#\Crud-Aluno\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\guilh\OneDrive\Área de Trabalho\c#\Crud-Aluno\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\guilh\OneDrive\Área de Trabalho\c#\Crud-Aluno\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\guilh\OneDrive\Área de Trabalho\c#\Crud-Aluno\bin\Debug\MySql.Data.xml
+C:\Users\guilh\OneDrive\Área de Trabalho\c#\Crud-Aluno\obj\Debug\Estudio.csprojAssemblyReference.cache
+C:\Users\guilh\OneDrive\Área de Trabalho\c#\Crud-Aluno\obj\Debug\Estudio.Form1.resources
+C:\Users\guilh\OneDrive\Área de Trabalho\c#\Crud-Aluno\obj\Debug\Estudio.Form2.resources
+C:\Users\guilh\OneDrive\Área de Trabalho\c#\Crud-Aluno\obj\Debug\Estudio.Form3.resources
+C:\Users\guilh\OneDrive\Área de Trabalho\c#\Crud-Aluno\obj\Debug\Estudio.Form4.resources
+C:\Users\guilh\OneDrive\Área de Trabalho\c#\Crud-Aluno\obj\Debug\Estudio.Properties.Resources.resources
+C:\Users\guilh\OneDrive\Área de Trabalho\c#\Crud-Aluno\obj\Debug\Estudio.csproj.GenerateResource.cache
+C:\Users\guilh\OneDrive\Área de Trabalho\c#\Crud-Aluno\obj\Debug\Estudio.csproj.CoreCompileInputs.cache
+C:\Users\guilh\OneDrive\Área de Trabalho\c#\Crud-Aluno\obj\Debug\Estudio.csproj.CopyComplete
+C:\Users\guilh\OneDrive\Área de Trabalho\c#\Crud-Aluno\obj\Debug\Estudio.exe
+C:\Users\guilh\OneDrive\Área de Trabalho\c#\Crud-Aluno\obj\Debug\Estudio.pdb
+C:\Users\guilh\OneDrive\Área de Trabalho\c#\Crud-Aluno\obj\Debug\Estudio.Form5.resources
