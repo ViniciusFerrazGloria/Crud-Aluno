@@ -16,13 +16,15 @@ namespace Estudio
         private string NomeModalidade;
         private string MaxParticipantes;
         private string ativo;
+        private int valor;
 
-        public Modalidade(string idModalidade, string NomeModalidade, string MaxParticipantes)
+        public Modalidade(string idModalidade, string NomeModalidade, string MaxParticipantes, int valor)
         {
             DAO_Conexao.getConexao("143.106.241.3", "cl19258", "cl19258", "cl*13032003");
             setIdModalidade(idModalidade);
             setNomeModalidade(NomeModalidade);
             setMaxParticipantes(MaxParticipantes);
+            this.valor = valor;
         }
 
         public Modalidade()
@@ -77,6 +79,16 @@ namespace Estudio
             return this.ativo;
         }
 
+        public void setValor(int valor)
+        {
+            this.valor = valor;
+        }
+
+        public int getValor()
+        {
+            return this.valor;
+        }
+
         //////////////////////////////////////////////////
 
         public void CadastrarModalidade()
@@ -84,7 +96,7 @@ namespace Estudio
             try
             {
                 DAO_Conexao.con.Open();
-                MySqlCommand insere = new MySqlCommand("INSERT INTO Estudio_Modalidade (IDModalidade, NomeModalidade, MaxParticipantes) VALUES ('" + idModalidade + "','" + NomeModalidade + "','" + MaxParticipantes + "')", DAO_Conexao.con);
+                MySqlCommand insere = new MySqlCommand("INSERT INTO Estudio_Modalidade (IDModalidade, NomeModalidade, MaxParticipantes, Valor) VALUES ('" + idModalidade + "','" + NomeModalidade + "','" + MaxParticipantes + "','" + valor + "')", DAO_Conexao.con);
                 //insere.Parameters.AddWithValue("foto", this.Foto);
                 insere.ExecuteNonQuery();
 

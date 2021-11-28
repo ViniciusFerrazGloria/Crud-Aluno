@@ -137,3 +137,4 @@ C:\Users\fabri\OneDrive\Área de Trabalho\ESCOLA\DAD\Estudio\Crud-Aluno-main\obj
 C:\Users\fabri\OneDrive\Área de Trabalho\ESCOLA\DAD\Estudio\Crud-Aluno-main\obj\Debug\Estudio.exe
 C:\Users\fabri\OneDrive\Área de Trabalho\ESCOLA\DAD\Estudio\Crud-Aluno-main\obj\Debug\Estudio.pdb
 C:\Users\fabri\OneDrive\Área de Trabalho\ESCOLA\DAD\Estudio\Crud-Aluno-main\obj\Debug\Estudio.Form6.resources
+C:\Users\guilh\OneDrive\Área de Trabalho\c#\Crud-Aluno\obj\Debug\Estudio.Form6.resources

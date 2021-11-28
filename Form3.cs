@@ -27,7 +27,7 @@ namespace Estudio
             }
             else
             {
-                Modalidade M = new Modalidade(textBox1.Text, textBox2.Text, textBox3.Text);
+                Modalidade M = new Modalidade(textBox1.Text, textBox2.Text, textBox3.Text, 10);
                 if (M.Validaid() == false)
                 {
                     M.CadastrarModalidade();
